@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="exporter-version" content="Evernote Mac 3.0.5 (209942)"/><meta name="keywords" content="coldfusion"/><meta name="created" content="2011-07-18 17:35:39 +0000"/><meta name="updated" content="2011-07-21 16:26:25 +0000"/><title>Debugging in Coldfusion CFCs</title></head><body style="word-wrap: break-word; -webkit-nbsp-mode: space; -webkit-line-break: after-white-space;">
+It is best practice in cfcs to set
+<div><font face="'Andale Mono'">output="no"</font></div>
+<div>for all cfc methods which do not need to output html. It is particularly good for minimizing the amount of white space that gets splatted onto the page. Unfortunately this makes traditional printf debugging very hard. Any methods which come later in the call tree cannot output html, even if they set</div>
+<div><font face="'Andale Mono'">output="yes"</font></div>
+<div><font face="Verdana">Rather than opening up the entire call tree to allow output it is possible to use another method to generate debug info. Use</font> <font face="'Andale Mono'">cfheader</font> <font face="Verdana">to write the debug info into the http header, then use the view header capability in modern browsers to view the header contents.</font></div>
+<div><font face="Verdana">Depending on how the data is formatted it will be more or less readable. Currently Im using the following format</font></div>
+<div><font face="'Andale Mono'">debug-#debug count#[-#label#-#label count#]</font></div>
+<div><font face="Verdana">and writing a separate header for each debug invocation. This way it is possible to determine the order that the headers were written in ( debug count and label count are request variables ).</font></div>
+<div><font face="Verdana">The debug data itself is converted into JSON and then written into the header. By doing so most of the data cases which break the header format are handled, and it possible to look at complex objects.</font></div>
+<div><font face="Verdana">To improve the usability of the output data it would be great to implement a plugin for the browser which extracted the relevant debug headers and displayed their data in an interactive format. While this is possible in Firefox, it is not possible in Safari, and difficult in Chrome.</font></div>
+<div><font face="Verdana">There are already a number of plugins for FireBug which implement similar systems for PHP and for the Coldfusion debug data that is generated at the bottom of pages (profiling, queries etc).</font></div>
+<div><font face="Verdana">Safari does not support access to the request headers for extensions.</font></div>
+<div><font face="Verdana">Firefox does, but only as an experimental api. To enable the experimental apis you must run the dev build and set a config flag.</font></div>
+<div><font face="Verdana">The difficulties encountered with Chrome and Safari leave Firefox as the browser of preference.</font></div>
+</body></html>
