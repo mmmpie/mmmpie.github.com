@@ -25,6 +25,14 @@
 			.page {
 				height: 600px;
 				overflow: scroll;
+				margin-bottom: 8px;
+			}
+			
+			.interstitial {
+				margin: 16px 100px 32px 100px;
+				border-bottom: 1px solid #DDD;
+				min-height: 1px;
+				clear: both;
 			}
 			
 			.article {
@@ -32,7 +40,6 @@
 			}
 			
 			.column{
-				width: 240px;
 				margin-right: 8px;
 				padding-right: 8px;
 				border-right: 1px solid #DDD;
@@ -68,10 +75,10 @@
 				Blog
 			</h1>
 			<div class="span-24">
-				<div class="span-16">
-					<div class="page span-16">
+				<div class="span-17">
+					<div class="page span-17">
 						<div class="article">
-							<div class="column">
+							<div class="column span-8">
 								<h3 class="title">Better Reading in HTML</h3>
 								<div class="attribution">
 									<p class="date">2012-01-16</p>
@@ -102,7 +109,7 @@
 									</ol>
 								</div>
 							</div>
-							<div class="column">
+							<div class="column span-8">
 								<p>
 									3 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -233,7 +240,7 @@
 							</div>
 						</div>
 					</div>
-					
+					<div class="interstitial"></div>
 					<div class="page span-16">
 						<div class="article">
 							<div class="column">
@@ -392,7 +399,7 @@
 						</ol>
 					</div>
 				</div>
-				<div class="span-8 last">
+				<div class="span-7 last">
 					<h2>Github</h2>
 					<iframe src="http://githubbadge.appspot.com/badge/mmmpie?a=0" style="border: 0;height: 142px;width: 200px;overflow: hidden;" frameBorder=0></iframe>
 					<ul>
