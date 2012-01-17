@@ -1,0 +1,22 @@
+{	
+	"title": "Improving Reading on the Web",
+	"author": "Jon Hart",
+	"date": "2012-01-16",
+	"body": [
+		{
+			"title": "On Reading",
+			"body": [
+				"Some text here about reading",
+				"Another paragraph"
+			]
+		},
+		{
+			"title": "On Tex",
+			"body": [
+				"Something about tex",
+				"Using tex on the web"
+			]
+		}
+	],
+	"footnotes": []
+}
