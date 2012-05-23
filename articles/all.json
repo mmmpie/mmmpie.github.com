@@ -1,1 +1,4 @@
-[ "reading.json" ]
+[
+	"reading.json",
+	"new-relic.json"
+]
