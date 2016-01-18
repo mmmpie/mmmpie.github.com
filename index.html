@@ -24,17 +24,57 @@
           <li class="single"><a href="https://github.com/mmmpie/mmmpie.github.com">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
+
       <section>
         <h3>
-<a id="practice-writing" class="anchor" href="#practice-writing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Practice Writing</h3>
+          <a id="practice-writing" class="anchor" href="#practice-writing" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+          Client Side Applications
+        </h3>
+        <p>
+          I work on the front end of <a href="enstratius.com">Dell Cloud Manager</a>, a fairly large Angular application.
+          Recently we have been struggling with platform standarization with other teams, which has lead me to ask why
+          our application is structured as a client side app communicating with a server side api.
+        </p>
+        <p>
+          It is certainly the flavor of the week for front end developers to work on 'rich' applications. But if I'm going
+          to evangelize this approach to other teams I need to understand what the real benefits of the pattern are.
+        </p>
+        <ul>
+          <li>
+            Keeps user context closer to the user. This avoids networks trips to get user specific data. The server also
+            does not need to maintain a large user state. That reduces server load and makes it easier to run multiple
+            servers without using sticky sessions or distributed sessions.
+          </li>
+          <li>
+            Separates concerns, keeping UX functionality clearly split from business logic. This affords the potential
+            for multiple UX clients (browser, phone, native app).
+          </li>
+          <li>
+            Puts application decisions as close to the user as possible, moving the application from being batch orientated
+            towards being interactive. A good interactive experience responds within 100ms.
+          </li>
+        </ul>
 
-<p>I know that I need to practice writing. Since I graduated college I havent really written anything of significant length. A couple of reports and proposals, but I doubt Ive even managed one a year over the last fifteen years. It is time to change that. Even if these posts are hardly longer than a tweet it is a start.</p>
+        <p>
+          I suspect that the real value of client side apps it the move towards interaction. Being able to respond to input
+          immediately is critical to providing sophisticated interactions with complicated models.
+        </p>
+      </section>
+
+      <section>
+        <h3>
+          <a id="practice-writing" class="anchor" href="#practice-writing" aria-hidden="true"><span class="octicon octicon-link"></span></a>
+          Practice Writing
+        </h3>
+        <p>
+          I know that I need to practice writing. Since I graduated college I havent really written anything of significant length. A couple of reports and proposals, but I doubt Ive even managed one a year over the last fifteen years. It is time to change that. Even if these posts are hardly longer than a tweet it is a start.
+        </p>
       </section>
     </div>
     <footer>
       <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
     </footer>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-    
+
   </body>
 </html>
